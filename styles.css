@@ -1,30 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
 
+:root {
+	--site1-primary-color: #a7202b;
+	--site1-background-color: #FAF9F6;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	text-decoration: none;
-	color: black;
+	color: var(--site1-primary-color);
 	font-size: 16px;
+	font-weight: 500;
 	font-family: 'Roboto Mono', monospace;
 }
 
 .site1 {
-	background: white;
+	background: var(--site1-background-color);
 	display: flex;
 }
 
 .site1 header {
 	position: fixed;
-	width: 18rem;
+	width: 20rem;
 	height: 100vh;
 }
 
 .site1 main {
 	position: relative;
-	margin-left: 18rem;
+	margin-left: 20rem;
 }
 
 .site1 .navbar {
@@ -38,8 +44,8 @@
 
 .site1 .logo img {
 	max-width: 12rem;
-	background: black;
-	border: 0.75rem solid black;
+	background: var(--site1-primary-color);
+	border: 0.75rem solid var(--site1-primary-color);
 	border-radius: 500px;
 }
 
@@ -51,6 +57,64 @@
 	font-size: 1.5rem;
 }
 
+.site1 .navbar-button-static, .navbar-button-animated {
+	display: inline-block;
+	position: relative;
+	height: 3rem;
+	max-width: 19rem;
+	background: var(--site1-primary-color);
+	border-radius: 3rem;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	padding-left: 0.5rem;
+	padding-right: 1rem;
+}
+
+.site1 .navbar-button-animated {
+	max-width: 3rem;
+	background: white;
+	padding: 0;
+	transition: max-width 0.4s ease-out, padding 0.4s;
+}
+
+.site1 .navbar-button-animated:hover {
+	max-width: 19rem;
+	padding-left: 0.5rem;
+	padding-right: 1rem;
+	transition: max-width 0.4s ease-out, padding 0.1s;
+}
+
+.site1 .navbar-button-icon {
+	display: inline-block;
+	height: 3rem;
+	width: 3rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.site1 .navbar-button-icon i {
+	font-size: 2rem;
+	line-height: 3rem;
+}
+
+.site1 .navbar-button-static .navbar-button-icon i { 
+	color: white;
+}
+
+.site1 .navbar-button-static span, .navbar-button-animated span {
+	font-size: 1.5rem;
+	vertical-align: middle;
+}
+
+.site1 .navbar-button-static span {
+	color: white;
+}
+
 h1 {
 	font-size: 4rem;
+}
+
+h1 i {
+	font-size: 4rem;
+	margin-right: 1rem;
 }
