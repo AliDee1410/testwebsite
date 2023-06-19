@@ -2,7 +2,10 @@
 
 :root {
 	--site1-primary-color: #a7202b;
-	--site1-background-color: #FAF9F6;
+	--site1-primary-shadow-color: #690512;
+	--site1-secondary-color: #2bb4c9;
+	--site1-secondary-shadow-color: #1389a4;
+	--site1-background-color: white;
 }
 
 * {
@@ -23,14 +26,15 @@
 }
 
 .site1 header {
-	position: fixed;
+	position: sticky;
 	width: 20rem;
 	height: 100vh;
+	background: var(--site1-primary-color);
 }
 
 .site1 main {
-	position: relative;
-	margin-left: 20rem;
+	width: 100vw;
+	height: 100vh;
 }
 
 .site1 .navbar {
@@ -44,13 +48,14 @@
 
 .site1 .logo img {
 	max-width: 12rem;
-	background: var(--site1-primary-color);
-	border: 0.75rem solid var(--site1-primary-color);
+	background: white;
+	border: 0.5rem solid white;
 	border-radius: 500px;
+	box-shadow: 10px 10px 10px var(--site1-primary-shadow-color);
 }
 
 .site1 .navbar li {
-	padding: 1.5rem 0;
+	padding: 1rem 0;
 }
 
 .site1 .navbar a {
@@ -62,12 +67,13 @@
 	position: relative;
 	height: 3rem;
 	max-width: 19rem;
-	background: var(--site1-primary-color);
+	background: white;
 	border-radius: 3rem;
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 10px 10px 10px var(--site1-primary-shadow-color);
 	overflow: hidden;
 	padding-left: 0.5rem;
 	padding-right: 1rem;
+	user-select: none;
 }
 
 .site1 .navbar-button-animated {
@@ -97,17 +103,9 @@
 	line-height: 3rem;
 }
 
-.site1 .navbar-button-static .navbar-button-icon i { 
-	color: white;
-}
-
 .site1 .navbar-button-static span, .navbar-button-animated span {
 	font-size: 1.5rem;
 	vertical-align: middle;
-}
-
-.site1 .navbar-button-static span {
-	color: white;
 }
 
 h1 {
@@ -117,4 +115,19 @@ h1 {
 h1 i {
 	font-size: 4rem;
 	margin-right: 1rem;
+}
+
+/* .site1 .home-left h1 {
+	font-size: 6rem;
+	font-weight: 700;
+} */
+
+.site1 .home-contact-button {
+	padding: 0.75rem 1.5rem;
+	color: white;
+	background: var(--site1-secondary-color);
+	border-radius: 3rem;
+	box-shadow: 10px 10px 10px var(--site1-secondary-shadow-color);
+	cursor: pointer;
+	user-select: none;
 }
